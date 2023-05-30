@@ -69,6 +69,7 @@ class TestDog:
         """
         row = CURSOR.execute(sql).fetchone()
         joey = Dog.new_from_db(row)
+        print(joey.id)
         assert((joey.id, joey.name, joey.breed) == (1, "joey", "cocker spaniel"))
 
     def test_gets_all(self):
